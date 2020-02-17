@@ -1,10 +1,7 @@
-Untitled
-================
-
 1. Generating Binomial Data
 ===========================
 
-Write a function that generates *N* binomial data points for some *n* and some *p*. You not allowed to use the *rbinom* function in R. Then use this function to print an estimate of the PMF for a Binomial distribution with *n* = 5 and *p* = 0.4 based on *N* = 10000 generated data points and plot your PMF as a barplot. Then use the *plot(ecdf())* function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the *sample* command to generate bernoulli trials and then summarize them appropriately.
+Write a function that generates N binomial data points for some n and some p. You not allowed to use the *rbinom* function in R. Then use this function to print an estimate of the PMF for a Binomial distribution with n = 5 and p = 0.4 based on N = 10000 generated data points and plot your PMF as a barplot. Then use the *plot(ecdf())* function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the *sample* command to generate bernoulli trials and then summarize them appropriately.
 
 ``` r
 BinomialFun <- function(N, n, p) {
@@ -64,7 +61,7 @@ binom_variance <- function(dat){
 2. Generating Geometric Data
 ============================
 
-Write a function that generates *N* geometric data points for some *p*. You not allowed to use the *rgeom* function in R. Then use this function to print an estimate of the PMF for a Geometric distribution with *p* = 0.7 based on *N* = 10000 generated data points and plot your PMF as a barplot. Then use the *plot(ecdf())* function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the *sample* command to generate bernoulli trials and then summarize them appropriately.
+Write a function that generates N geometric data points for some p. You not allowed to use the *rgeom* function in R. Then use this function to print an estimate of the PMF for a Geometric distribution with p = 0.7 based on N = 10000 generated data points and plot your PMF as a barplot. Then use the *plot(ecdf())* function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the *sample* command to generate bernoulli trials and then summarize them appropriately.
 
 ``` r
 # generate geometric data function 
@@ -130,7 +127,7 @@ geom_var <- function(geom_dat){
 3. Generating Negative Binomial data
 ====================================
 
-Write a function that generates *N* negative binomial data points for some *r* (number of successes) and some *p*. You not allowed to use the *rnbinom* function in R. Then use this function to print an estimate of the PMF for a Negative Binomial distribution with *p* = 0.7 and *r* = 5 based on *N* = 10000 generated data points and plot your PMF as a barplot. Then use the *plot(ecdf())* function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the *sample* command to generate bernoulli trials and then summarize them appropriately.
+Write a function that generates N negative binomial data points for some r (number of successes) and some p. You not allowed to use the *rnbinom* function in R. Then use this function to print an estimate of the PMF for a Negative Binomial distribution with p = 0.7 and r = 5 based on N = 10000 generated data points and plot your PMF as a barplot. Then use the *plot(ecdf())* function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the *sample* command to generate bernoulli trials and then summarize them appropriately.
 
 ``` r
 ## negative binomial distribution 
@@ -196,7 +193,7 @@ negbi_var <- function(negbi_dat){
 4. Generating Hypergeometric data
 =================================
 
-Write a function that generates *N* hypergeometric data points for some total population size, *m*, some number of \`\`tagged'' elements, *r*, and some number of elements sampled, *k*. You not allowed to use the *rhyper* function in R. Then use this function to print an estimate of the PMF for a Hypergeometric distribution with *m* = 20,  *r* = 15,  *k* = 6 based on *N* = 10000 generated data points and plot your PMF as a barplot. Then use the *plot(ecdf())* function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the *sample* command on an appropriately created population.
+Write a function that generates N hypergeometric data points for some total population size, m, some number of \`\`tagged'' elements, r, and some number of elements sampled, k. You not allowed to use the *rhyper* function in R. Then use this function to print an estimate of the PMF for a Hypergeometric distribution with m = 20, r = 15, k = 6 based on N = 10000 generated data points and plot your PMF as a barplot. Then use the *plot(ecdf())* function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the *sample* command on an appropriately created population.
 
 ``` r
 # N - Total # 

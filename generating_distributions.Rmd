@@ -1,6 +1,8 @@
 ---
 title: "Untitled"
-output: github_document
+output:
+  md_document:
+    variant: markdown_github
 ---
 
 ```{r setup, include=FALSE}
@@ -9,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # 1. Generating Binomial Data
 
-Write a function that generates $N$ binomial data points for some $n$ and some $p$. You not allowed to use the _rbinom_ function in R. Then use this function to print an estimate of the PMF for a Binomial distribution with $n = 5$ and $p = 0.4$ based on $N = 10000$ generated data points and plot your PMF as a barplot. Then use the _plot(ecdf())_ function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the _sample_ command to generate bernoulli trials and then summarize them appropriately.
+Write a function that generates N binomial data points for some n and some p. You not allowed to use the _rbinom_ function in R. Then use this function to print an estimate of the PMF for a Binomial distribution with n = 5 and p = 0.4 based on N = 10000 generated data points and plot your PMF as a barplot. Then use the _plot(ecdf())_ function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the _sample_ command to generate bernoulli trials and then summarize them appropriately.
 
 ```{r echo=TRUE}
 BinomialFun <- function(N, n, p) {
@@ -78,7 +80,7 @@ paste("The variance of the distirbution is ", as.character(binom_variance(binomi
 
 # 2. Generating Geometric Data
 
-Write a function that generates $N$ geometric data points for some $p$. You not allowed to use the _rgeom_ function in R. Then use this function to print an estimate of the PMF for a Geometric distribution with $p = 0.7$ based on $N = 10000$ generated data points and plot your PMF as a barplot. Then use the _plot(ecdf())_ function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the _sample_ command to generate bernoulli trials and then summarize them appropriately.
+Write a function that generates N geometric data points for some p. You not allowed to use the _rgeom_ function in R. Then use this function to print an estimate of the PMF for a Geometric distribution with p = 0.7 based on N = 10000 generated data points and plot your PMF as a barplot. Then use the _plot(ecdf())_ function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the _sample_ command to generate bernoulli trials and then summarize them appropriately.
 
 ```{r echo=TRUE}
 # generate geometric data function 
@@ -153,7 +155,7 @@ paste("The variance of the geometric distribution is ", as.character(geom_var(ge
 
 # 3. Generating Negative Binomial data
 
-Write a function that generates $N$ negative binomial data points for some $r$ (number of successes) and some $p$. You not allowed to use the _rnbinom_ function in R. Then use this function to print an estimate of the PMF for a Negative Binomial distribution with $p = 0.7$ and $r = 5$ based on $N = 10000$ generated data points and plot your PMF as a barplot. Then use the _plot(ecdf())_ function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the _sample_ command to generate bernoulli trials and then summarize them appropriately.
+Write a function that generates N negative binomial data points for some r (number of successes) and some p. You not allowed to use the _rnbinom_ function in R. Then use this function to print an estimate of the PMF for a Negative Binomial distribution with p = 0.7 and r = 5 based on N = 10000 generated data points and plot your PMF as a barplot. Then use the _plot(ecdf())_ function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the _sample_ command to generate bernoulli trials and then summarize them appropriately.
 
 ```{r echo=TRUE}
 ## negative binomial distribution 
@@ -229,7 +231,7 @@ paste("The variance of the negative binomial distribution is ", as.character(neg
 
 # 4. Generating Hypergeometric data 
 
-Write a function that generates $N$ hypergeometric data points for some total population size, $m$, some number of ``tagged'' elements, $r$, and some number of elements sampled, $k$. You not allowed to use the _rhyper_ function in R. Then use this function to print an estimate of the PMF for a Hypergeometric distribution with $m = 20,\ r = 15, \ k = 6$ based on $N = 10000$ generated data points and plot your PMF as a barplot. Then use the _plot(ecdf())_ function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the _sample_ command on an appropriately created population.
+Write a function that generates N hypergeometric data points for some total population size, m, some number of ``tagged'' elements, r, and some number of elements sampled, k. You not allowed to use the _rhyper_ function in R. Then use this function to print an estimate of the PMF for a Hypergeometric distribution with m = 20, r = 15, k = 6 based on N = 10000 generated data points and plot your PMF as a barplot. Then use the _plot(ecdf())_ function to plot an empirical cumulative distribution function, an estimate of the true CDF. Use your results to estimate the true mean and variance of the distribution using the expectation and variance formulas. Hint: you will want to use the _sample_ command on an appropriately created population.
 
 ```{r echo=TRUE}
 # N - Total # 
